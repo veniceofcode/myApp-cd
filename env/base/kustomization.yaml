@@ -1,0 +1,8 @@
+resources:
+- namespace.yaml
+- layer1.yaml
+- layer1-service.yaml
+- layer1-route.yaml
+
+
+
