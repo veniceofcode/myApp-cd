@@ -18,13 +18,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-        env:
-        - name: ROX_API_TOKEN
-          valueFrom:
-            secretKeyRef:
-              key: acs_api_token
-              name: acs-secret        
+        image: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime  
         imagePullPolicy: Always
         ports:
         - containerPort: 9080
