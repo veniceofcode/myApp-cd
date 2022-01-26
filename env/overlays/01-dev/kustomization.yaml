@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
 - rolebindings/argocd-admin.yaml
 - ../../base
+images:
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
+  newTag: 705c-7n29r
