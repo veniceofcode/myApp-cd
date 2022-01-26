@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: tst-layers-app
+  name: my-app-development
 spec: {}
 status: {}
