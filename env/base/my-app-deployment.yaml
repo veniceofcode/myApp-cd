@@ -5,6 +5,7 @@ metadata:
     app: myapp
     app.kubernetes.io/part-of: liberty
   name: myapp
+  namespace: my-app-development
 spec:
   replicas: 1
   selector:
