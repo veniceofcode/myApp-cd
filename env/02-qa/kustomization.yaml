@@ -15,14 +15,14 @@ patchesJson6902:
       value: myapp-qa
   target:
     kind: Service
-    name: myapp 
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
       value: myapp-qa
   target:
     kind: Route
-    name: myapp        
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/name
@@ -36,20 +36,23 @@ patchesJson6902:
       value: myapp-qa
   target:
     kind: RoleBinding
-    name: argocd-admin   
+    name: argocd-admin
 - patch: |-
     - op: replace
       path: /subjects/0/namespace
       value: my-app-qa
   target:
     kind: RoleBinding
-    name: my-app-development 
+    name: my-app-development
 - patch: |-
     - op: replace
       path: /metadata/name
       value: my-app-qa
   target:
     kind: RoleBinding
-    name: my-app-development    
-bases:
+    name: my-app-development
+resources:
 - ../base
+images:
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
+  newTag: 705c-bsvqm
