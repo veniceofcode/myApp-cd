@@ -40,14 +40,14 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /subjects/0/namespace
-      value: my-app-qa
+      value: myapp-qa
   target:
     kind: RoleBinding
     name: my-app-development
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: my-app-qa
+      value: myapp-qa
   target:
     kind: RoleBinding
     name: my-app-development
