@@ -4,7 +4,8 @@ kind: Kustomization
 namespace: my-app-qa
 
 resources:
-- namespace.yaml
+- 01-rolebindings/argocd-admin.yaml
+- 01-rolebindings/ci-pipeline-role.yaml
 
 bases:
 - ../base
