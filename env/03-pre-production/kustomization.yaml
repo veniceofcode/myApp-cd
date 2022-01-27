@@ -10,7 +10,7 @@ resources:
 - namespace.yaml
 
 bases:
-- ../../base
+- ../base
 
 
 
