@@ -1,12 +1,56 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: my-app-qa
-
-resources:
-- 01-rolebindings/argocd-admin.yaml
-- 01-rolebindings/ci-pipeline-role.yaml
-
+patchesJson6902:
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: myapp-qa
+  target:
+    kind: Deployment
+    name: myapp
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: myapp-qa
+  target:
+    kind: Service
+    name: myapp 
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: myapp-qa
+  target:
+    kind: Route
+    name: myapp        
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: myapp-qa
+  target:
+    kind: Namespace
+    name: my-app-development
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: myapp-qa
+  target:
+    kind: RoleBinding
+    name: argocd-admin   
+- patch: |-
+    - op: replace
+      path: /subjects/0/namespace
+      value: my-app-qa
+  target:
+    kind: RoleBinding
+    name: my-app-development 
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: my-app-qa
+  target:
+    kind: RoleBinding
+    name: my-app-development    
 bases:
 - ../base
 
