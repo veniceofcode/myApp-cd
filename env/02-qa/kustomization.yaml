@@ -53,8 +53,3 @@ patchesJson6902:
     name: my-app-development    
 bases:
 - ../base
-
-
-
-
-
