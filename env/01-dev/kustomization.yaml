@@ -7,3 +7,7 @@ resources:
 
 bases:
 - ../base
+
+images:
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
+  newTag: 705c-mfv9h
