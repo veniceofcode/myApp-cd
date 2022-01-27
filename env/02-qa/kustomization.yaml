@@ -6,11 +6,8 @@ namespace: my-app-qa
 resources:
 - 01-rolebindings/argocd-admin.yaml
 - 01-rolebindings/ci-pipeline-role.yaml
-
-bases:
 - ../base
 
-
-
-
-
+images:
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
+  newTag: 705c-tls7v
