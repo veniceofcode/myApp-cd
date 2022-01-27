@@ -9,4 +9,4 @@ resources:
 
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: 705c-t87lq
+  newTag: 705c-tls7v
