@@ -4,7 +4,7 @@ metadata:
   name: myapp
   labels:
     app: myapp
-  namespace: my-app-development
+  namespace: myapp-development
 spec:
   ports:
   - name: http
