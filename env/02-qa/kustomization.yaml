@@ -29,7 +29,7 @@ patchesJson6902:
       value: myapp-qa
   target:
     kind: Namespace
-    name: my-app-development
+    name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
@@ -43,14 +43,14 @@ patchesJson6902:
       value: myapp-qa
   target:
     kind: RoleBinding
-    name: my-app-development
+    name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/name
       value: myapp-qa
   target:
     kind: RoleBinding
-    name: my-app-development
+    name: myapp-development
 resources:
 - ../base
 images:

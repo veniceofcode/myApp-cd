@@ -36,7 +36,7 @@ patchesJson6902:
       value: myapp-pre-prod
   target:
     kind: Namespace
-    name: my-app-development
+    name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
@@ -47,17 +47,17 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /subjects/0/namespace
-      value: my-app-pre-prod
+      value: myapp-pre-prod
   target:
     kind: RoleBinding
-    name: my-app-development 
+    name: myapp-development 
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: my-app-pre-prod
+      value: myapp-pre-prod
   target:
     kind: RoleBinding
-    name: my-app-development    
+    name: myapp-development    
 bases:
 - ../base
 
