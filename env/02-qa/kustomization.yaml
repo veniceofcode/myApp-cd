@@ -55,8 +55,5 @@ resources:
 - ../base
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-<<<<<<< HEAD
   newTag: c46c-fvx5m
-=======
-  newTag: c46c-cndxf
->>>>>>> parent of 0fb1d7a... Update from ci process - qa
+
