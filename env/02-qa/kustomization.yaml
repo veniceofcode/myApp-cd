@@ -55,4 +55,4 @@ resources:
 - ../base
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: c46c-jggwr
+  newTag: c46c-nqmqd
