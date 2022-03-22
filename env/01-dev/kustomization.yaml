@@ -5,4 +5,4 @@ resources:
 - ../base
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: d8fa-blvmt
+  newTag: a4c1-blbml
