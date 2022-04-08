@@ -55,6 +55,6 @@ resources:
 - ../base
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: 927c-knpr4
+  newTag: 927c-l8v6n
 - name: quay.io/marrober/myapp
   newTag: 927c-lwhxq
