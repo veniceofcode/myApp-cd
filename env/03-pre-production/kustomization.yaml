@@ -56,4 +56,4 @@ bases:
 - ../base/01-rolebindings
 images:
 - name: quay.io/marrober/myapp
-  newTag: 2ccb-jzjsh
+  newTag: 6322-rbbs9
