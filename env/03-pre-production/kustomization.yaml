@@ -29,7 +29,7 @@ patchesJson6902:
       value: myapp-pre-prod
   target:
     kind: Route
-    name: myapp
+    name: myapp-route
 - patch: |-
     - op: replace
       path: /metadata/name
