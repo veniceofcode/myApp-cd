@@ -5,4 +5,4 @@ resources:
 - ../base/main
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: 2ccb-jzjsh
+  newTag: 2af4-xpm4d
