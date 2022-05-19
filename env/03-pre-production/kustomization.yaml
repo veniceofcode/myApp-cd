@@ -60,8 +60,6 @@ patchesJson6902:
     name: myapp-development    
 bases:
 - ../base
-
-
-
-
-
+images:
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
+  newTag: c541-pp9nk
