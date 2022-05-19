@@ -6,5 +6,3 @@ resources:
 - myapp-deployment.yaml
 - myapp-service.yaml
 - myapp-route.yaml
-- 01-rolebindings/argocd-admin.yaml
-- 01-rolebindings/ci-pipeline-role.yaml
