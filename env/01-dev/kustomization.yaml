@@ -3,6 +3,8 @@ kind: Kustomization
 
 resources:
 - ../base/main
+- ../base/01-rolebindings
+- ../base/02-rolebindings
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
   newTag: 2af4-xpm4d
