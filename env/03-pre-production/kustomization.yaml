@@ -48,5 +48,5 @@ bases:
 - ../base/main
 - ../base/01-rolebindings
 images:
-- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: 927c-bnfw9
+- name: quay.io/marrober/myapp
+  newTag: 2ccb-jzjsh
