@@ -55,4 +55,4 @@ resources:
 - ../base
 images:
 - name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
-  newTag: 6322-h2vk2
+  newTag: 6322-xd72p
