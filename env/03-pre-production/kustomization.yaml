@@ -11,25 +11,32 @@ patchesJson6902:
     name: myapp
 - patch: |-
     - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: quay.io/marrober/myapp
+  target:
+    kind: Deployment
+    name: myapp
+- patch: |-
+    - op: replace
       path: /spec/replicas
       value: 4
   target:
     kind: Deployment
-    name: myapp    
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
       value: myapp-pre-prod
   target:
     kind: Service
-    name: myapp 
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
       value: myapp-pre-prod
   target:
     kind: Route
-    name: myapp        
+    name: myapp-route
 - patch: |-
     - op: replace
       path: /metadata/name
@@ -43,25 +50,10 @@ patchesJson6902:
       value: myapp-pre-prod
   target:
     kind: RoleBinding
-    name: argocd-admin   
-- patch: |-
-    - op: replace
-      path: /subjects/0/namespace
-      value: myapp-pre-prod
-  target:
-    kind: RoleBinding
-    name: myapp-development 
-- patch: |-
-    - op: replace
-      path: /metadata/name
-      value: myapp-pre-prod
-  target:
-    kind: RoleBinding
-    name: myapp-development    
+    name: argocd-admin
 bases:
-- ../base
-
-
-
-
-
+- ../base/main
+- ../base/01-rolebindings
+images:
+- name: quay.io/marrober/myapp
+  newTag: 6322-rbbs9

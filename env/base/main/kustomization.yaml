@@ -1,7 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
 resources:
 - namespace.yaml
 - myapp-deployment.yaml
 - myapp-service.yaml
 - myapp-route.yaml
-- 01-rolebindings/argocd-admin.yaml
-- 01-rolebindings/ci-pipeline-role.yaml
