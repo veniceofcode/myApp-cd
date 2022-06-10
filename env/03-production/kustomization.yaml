@@ -53,7 +53,7 @@ patchesJson6902:
     name: argocd-admin
 images:
 - name: marrober/myapp
-  newTag: 6322-x9r2q
+  newTag: 5cbf-hn4k7
 - name: quay.io/marrober/myapp
   newTag: 6322-phcb2
 resources:
