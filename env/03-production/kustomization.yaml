@@ -5,7 +5,7 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-prod
+      value: myapp-production
   target:
     kind: Deployment
     name: myapp
@@ -26,36 +26,33 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-prod
+      value: myapp-production
   target:
     kind: Service
     name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-prod
+      value: myapp-production
   target:
     kind: Route
     name: myapp-route
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: myapp-prod
+      value: myapp-production
   target:
     kind: Namespace
     name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-prod
+      value: myapp-production
   target:
     kind: RoleBinding
     name: argocd-admin
-images:
-- name: marrober/myapp
-  newTag: 5a25-qpxtt
 - name: quay.io/marrober/myapp
-  newTag: 6322-phcb2
+  newTag: 5a25-qpxtt
 resources:
 - ../base/main
 - ../base/01-rolebindings
