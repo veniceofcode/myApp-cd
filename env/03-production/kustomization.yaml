@@ -51,6 +51,8 @@ patchesJson6902:
   target:
     kind: RoleBinding
     name: argocd-admin
+- name: quay.io/marrober/myapp
+  newTag: 5a25-qpxtt
 resources:
 - ../base/main
 - ../base/01-rolebindings
