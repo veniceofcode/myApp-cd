@@ -52,7 +52,7 @@ patchesJson6902:
     kind: RoleBinding
     name: argocd-admin
 images:
-- name: marrober/myapp
+- name: quay.io/marrober/myapp
   newTag: 545f-frb5j
 resources:
 - ../base/main
