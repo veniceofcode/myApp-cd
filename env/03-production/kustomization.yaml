@@ -52,6 +52,8 @@ patchesJson6902:
     kind: RoleBinding
     name: argocd-admin
 images:
+- name: marrober/myapp
+  newTag: 5a25-8h567
 - name: quay.io/marrober/myapp
   newTag: "345"
 resources:
