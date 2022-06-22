@@ -54,8 +54,6 @@ patchesJson6902:
 images:
 - name: marrober/myapp
   newTag: 5a25-8h567
-- name: quay.io/marrober/myapp
-  newTag: "345"
 resources:
 - ../base/main
 - ../base/01-rolebindings
