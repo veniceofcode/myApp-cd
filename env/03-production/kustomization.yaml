@@ -12,7 +12,7 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
-      value: quay.io/marrober/myapp
+      value: quay.io/rbrhssa/myapp
   target:
     kind: Deployment
     name: myapp
@@ -52,7 +52,7 @@ patchesJson6902:
     kind: RoleBinding
     name: argocd-admin
 images:
-- name: quay.io/marrober/myapp
+- name: quay.io/rbrhssa/myapp
   newTag: f5d1-6gpbz
 resources:
 - ../base/main
