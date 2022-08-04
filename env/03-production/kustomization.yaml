@@ -12,7 +12,7 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
-      value: quay.io/marrober/myapp
+      value: quay.io/rbrhssa/myapp
   target:
     kind: Deployment
     name: myapp
@@ -55,5 +55,5 @@ bases:
 - ../base/main
 - ../base/01-rolebindings
 images:
-- name: quay.io/marrober/myapp
+- name: quay.io/rbrhssa/myapp
   newTag: 6322-rbbs9
