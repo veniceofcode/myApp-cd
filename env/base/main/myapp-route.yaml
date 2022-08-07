@@ -2,10 +2,10 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   labels:
-    app: myapp-ui
-  name: myapp-ui-route
-  namespace: myapp-ui-development
+    app: myapp
+  name: myapp-route
+  namespace: myapp-development
 spec:
   to:
     kind: Service
-    name: myapp-ui
+    name: myapp

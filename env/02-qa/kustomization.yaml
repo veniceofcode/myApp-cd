@@ -5,56 +5,56 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: Deployment
-    name: myapp-ui
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: Service
-    name: myapp-ui
+    name: myapp
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: Route
-    name: myapp-ui-route
+    name: myapp-route
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: Namespace
-    name: myapp-ui-development
+    name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: RoleBinding
     name: argocd-admin
 - patch: |-
     - op: replace
       path: /subjects/0/namespace
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: RoleBinding
-    name: myapp-ui-development
+    name: myapp-development
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: myapp-ui-qa
+      value: myapp-qa
   target:
     kind: RoleBinding
-    name: myapp-ui-development
+    name: myapp-development
 resources:
 - ../base/main
 - ../base/01-rolebindings
 - ../base/02-rolebindings
 images:
-- name: image-registry.openshift-image-registry.svc:5000/myapp-ui-ci/myapp-ui-runtime
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ci/myapp-runtime
   newTag: b947-46j8x

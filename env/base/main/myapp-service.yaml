@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-ui
+  name: myapp
   labels:
-    app: myapp-ui
-  namespace: myapp-ui-development
+    app: myapp
+  namespace: myapp-development
 spec:
   ports:
   - name: http
     port: 9080
   selector:
-    app: myapp-ui
+    app: myapp
