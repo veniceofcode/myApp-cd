@@ -5,56 +5,56 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: Deployment
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: Service
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: Route
-    name: chris-ui-route
+    name: myapp-ui-route
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: Namespace
-    name: chris-ui-development
+    name: myapp-ui-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: RoleBinding
     name: argocd-admin
 - patch: |-
     - op: replace
       path: /subjects/0/namespace
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: RoleBinding
-    name: chris-ui-development
+    name: myapp-ui-development
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: chris-ui-qa
+      value: myapp-ui-qa
   target:
     kind: RoleBinding
-    name: chris-ui-development
+    name: myapp-ui-development
 resources:
 - ../base/main
 - ../base/01-rolebindings
 - ../base/02-rolebindings
 images:
-- name: image-registry.openshift-image-registry.svc:5000/chris-ui-ci/chris-ui-runtime
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ui-ci/myapp-ui-runtime
   newTag: b947-46j8x

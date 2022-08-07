@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chris-ui
+  name: myapp-ui
   labels:
-    app: chris-ui
-  namespace: chris-ui-development
+    app: myapp-ui
+  namespace: myapp-ui-development
 spec:
   ports:
   - name: http
     port: 9080
   selector:
-    app: chris-ui
+    app: myapp-ui

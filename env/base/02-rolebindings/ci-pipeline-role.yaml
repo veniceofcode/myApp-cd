@@ -1,12 +1,12 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: chris-ui-development
-  namespace: chris-ui-ci
+  name: myapp-ui-development
+  namespace: myapp-ui-ci
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: chris-ui-development
+    namespace: myapp-ui-development
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

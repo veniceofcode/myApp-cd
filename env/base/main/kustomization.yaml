@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - namespace.yaml
-- chris-ui-deployment.yaml
-- chris-ui-service.yaml
-- chris-ui-route.yaml
+- myapp-ui-deployment.yaml
+- myapp-ui-service.yaml
+- myapp-ui-route.yaml

@@ -5,49 +5,49 @@ patchesJson6902:
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-prod
+      value: myapp-ui-prod
   target:
     kind: Deployment
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/image
-      value: quay.io/rbrhssa/chris-ui
+      value: quay.io/rbrhssa/myapp-ui
   target:
     kind: Deployment
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /spec/replicas
       value: 4
   target:
     kind: Deployment
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-prod
+      value: myapp-ui-prod
   target:
     kind: Service
-    name: chris-ui
+    name: myapp-ui
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-prod
+      value: myapp-ui-prod
   target:
     kind: Route
-    name: chris-ui-route
+    name: myapp-ui-route
 - patch: |-
     - op: replace
       path: /metadata/name
-      value: chris-ui-prod
+      value: myapp-ui-prod
   target:
     kind: Namespace
-    name: chris-ui-development
+    name: myapp-ui-development
 - patch: |-
     - op: replace
       path: /metadata/namespace
-      value: chris-ui-prod
+      value: myapp-ui-prod
   target:
     kind: RoleBinding
     name: argocd-admin
@@ -55,5 +55,5 @@ bases:
 - ../base/main
 - ../base/01-rolebindings
 images:
-- name: quay.io/rbrhssa/chris-ui
+- name: quay.io/rbrhssa/myapp-ui
   newTag: 6322-rbbs9

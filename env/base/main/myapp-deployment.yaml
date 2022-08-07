@@ -2,23 +2,23 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   labels:
-    app: chris-ui
+    app: myapp-ui
     app.kubernetes.io/part-of: liberty
-  name: chris-ui
-  namespace: chris-ui-development
+  name: myapp-ui
+  namespace: myapp-ui-development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: chris-ui
+      app: myapp-ui
   template:
     metadata:
       labels:
-        app: chris-ui
+        app: myapp-ui
     spec:
       containers:
-      - name: chris-ui
-        image: image-registry.openshift-image-registry.svc:5000/chris-ui-ci/chris-ui-runtime  
+      - name: myapp-ui
+        image: image-registry.openshift-image-registry.svc:5000/myapp-ui-ci/myapp-ui-runtime  
         imagePullPolicy: Always
         ports:
         - containerPort: 9080

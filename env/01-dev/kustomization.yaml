@@ -6,5 +6,5 @@ resources:
 - ../base/01-rolebindings
 - ../base/02-rolebindings
 images:
-- name: image-registry.openshift-image-registry.svc:5000/chris-ui-ci/chris-ui-runtime
+- name: image-registry.openshift-image-registry.svc:5000/myapp-ui-ci/myapp-ui-runtime
   newTag: b947-46j8x
